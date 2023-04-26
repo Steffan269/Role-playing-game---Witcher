@@ -1,0 +1,163 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-image: url(/images/wood2.jpg);
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Characters */
+
+.character-card {
+    height: 10.2em;
+    width: 13em;
+    margin-top: 0.5em;
+    max-width: 230px;
+    padding: 1vh 1vw;
+    background: #e1ddd4;
+    border: 0.2em solid #022067;
+    border-radius: 15px;
+    position: relative;
+    font-size: 1.6rem;
+    text-align: center;
+    overflow: hidden;
+    color: #022067;
+    box-shadow: inset 0px 0px 6px 2px #022067,
+                0px 0px 10px #022067;
+
+}
+.avatar {
+    width: 5em;
+    max-width: 100%;
+    background-color: #022067;
+    border-radius: 15px;
+}
+.name {
+    margin: 1vh 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+}
+.health {
+    font-size: 1.1rem;
+    text-align: left;
+    letter-spacing: 0.03em;
+    margin: 1vh 5%;
+}
+.health b {
+    font-weight: bold;
+}
+.dice-container {
+    width: 100%;
+    height: 16%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #022067;
+}
+.dice, .placeholder-dice {
+    background: #e1ddd4;
+    height: 1.3em;
+    width: 1.3em;
+    border: 0.15em solid #e9a61e;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 5vh;
+   
+}  
+.dice-container .placeholder-dice {
+    background-color: transparent;
+}
+
+/* Health bar */
+
+.health-bar-outer {
+    background: #171217;
+    height: 1vh;
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 2px;
+}
+.health-bar-outer .health-bar-inner {
+    background: #466d34;
+    height: 100%;
+    border-radius: 2px;
+}
+.health-bar-outer .health-bar-inner.danger {
+    background: #d1435f;
+}
+
+/* Attack button */
+
+button {
+    font-family: 'MedievalSharp', cursive;
+    background-color: #e9a61e;
+    color: #022067;
+    border: 2px solid #022067;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin: 0.5em auto;
+    display: block;
+
+}
+
+/* End game */
+
+.end-game {
+    text-align: center;
+    margin-top: 50%;
+    color: #e9a61e;
+    text-shadow: 2px 2px #022067;
+    font-size: 1.5rem;
+}
+
+
+
+/* Media queries */
+
+@media(min-width:550px){
+    .character-card {
+        height: 15em;
+    }
+    .avatar {
+        width: 8.5em;
+    }
+    .dice-container {
+        height: 16%;
+    }
+    .dice, .dice-container .placeholder-dice {
+        height: 1.8em;
+        width: 1.8em;
+        line-height: 7vh;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    main {
+        flex-direction: row;
+        justify-content: center;
+        margin: 8vh 5vw;
+        gap: 3em;
+    }
+    button {
+        font-size: 2.3rem;
+        border: 4px solid #022067;
+    }
+    .end-game {
+        margin-top: 15%;
+        font-size: 3rem;
+        text-shadow: 5px 5px #022067;
+    }
+}
